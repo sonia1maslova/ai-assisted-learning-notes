@@ -22,3 +22,18 @@ last_reviewed:
 ```
 
 完成核查后，将 `review_status` 改为 `reviewed`，并在 `last_reviewed` 中填写审核日期。
+
+## Formula formatting
+
+GitHub 上的 Markdown 笔记请用 `$...$` 书写行内公式，用单独成行的 `$$` 包围多行公式。例如：
+
+```text
+行内：$y = \beta_0 + \beta_1 x$
+
+独立公式：
+$$
+\hat\beta = (X^\top X)^{-1}X^\top y
+$$
+```
+
+不要使用 `\(...\)` 或 `\[...\]` 作为 Markdown 中的公式分隔符；提交前可在 GitHub 的文件预览中确认公式显示。

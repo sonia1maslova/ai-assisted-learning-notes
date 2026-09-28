@@ -21,15 +21,15 @@ last_reviewed:
 
 可以简单表示为：
 
-\[
-	ext{问题}
-ightarrow
-	ext{识别假设}
-ightarrow
-	ext{拆到底层约束}
-ightarrow
-	ext{重新推导}
-\]
+$$
+\text{问题}
+\rightarrow
+\text{识别假设}
+\rightarrow
+\text{拆到底层约束}
+\rightarrow
+\text{重新推导}
+$$
 
 第一性原理的重点不是“为了与别人不同”，而是避免把未经检查的假设当成必然事实。
 
@@ -47,29 +47,29 @@ last_reviewed:
 
 例如：
 
-\[
-	ext{底层理论}
-ightarrow
-	ext{成熟方法}
-ightarrow
-	ext{工具}
-ightarrow
-	ext{新的研究问题}
-\]
+$$
+\text{底层理论}
+\rightarrow
+\text{成熟方法}
+\rightarrow
+\text{工具}
+\rightarrow
+\text{新的研究问题}
+$$
 
 做数据分析时，我们不需要每次都重新证明矩阵代数、最大似然估计或傅里叶变换。
 
 更合理的做法是：
 
-\[
-\boxed{	ext{默认继承已有知识}}
-\]
+$$
+\boxed{\text{默认继承已有知识}}
+$$
 
 在必要的时候：
 
-\[
-\boxed{	ext{重新打开关键黑箱}}
-\]
+$$
+\boxed{\text{重新打开关键黑箱}}
+$$
 
 所以，第一性原理并不是反对已有知识，而是反对**无条件地接受关键假设**。
 
@@ -81,15 +81,15 @@ last_reviewed:
 
 一个重要过程是：
 
-\[
-	ext{第一性发现}
-ightarrow
-	ext{知识固化}
-ightarrow
-	ext{成为工具}
-ightarrow
-	ext{下一代从更高层继续推导}
-\]
+$$
+\text{第一性发现}
+\rightarrow
+\text{知识固化}
+\rightarrow
+\text{成为工具}
+\rightarrow
+\text{下一代从更高层继续推导}
+$$
 
 昨天某个人耗费多年得到的底层结论，今天可以成为其他人的起点。
 
@@ -122,15 +122,15 @@ last_reviewed:
 
 可以粗略写成：
 
-\[
-	ext{追问必要性}
+$$
+\text{追问必要性}
 \approx
-	ext{假设的不确定性}
-	imes
-	ext{它对结论的影响}
-	imes
-	ext{错误代价}
-\]
+\text{假设的不确定性}
+\times
+\text{它对结论的影响}
+\times
+\text{错误代价}
+$$
 
 也就是说，一个假设越不确定、越关键、错了后果越大，就越值得往下追问。
 
@@ -144,42 +144,41 @@ last_reviewed:
 
 如果：
 
-\[
-A ightarrow C
-\]
+$$
+A \rightarrow C
+$$
 
 换成另一个合理假设：
 
-\[
-A' ightarrow C
-\]
+$$
+A' \rightarrow C
+$$
 
 再换一个：
 
-\[
-A'' ightarrow C
-\]
+$$
+A'' \rightarrow C
+$$
 
 结论仍然稳定，那么通常不需要继续深挖。
 
 但如果：
 
-\[
-A ightarrow C
-\]
+$$
+A \rightarrow C
+$$
 
 而：
 
-\[
-A' ightarrow 
-eg C
-\]
+$$
+A' \rightarrow \neg C
+$$
 
 那么说明这个假设本身非常关键。
 
 这时就值得进一步追问：
 
-- 为什么选择 \(A\)？
+- 为什么选择 $A$？
 - 它是理论必需的吗？
 - 还是只是领域惯例？
 - 它是否有实证依据？
@@ -335,21 +334,21 @@ eg C
 
 成熟的思维方式不是：
 
-\[
-	ext{第一性原理}
-\quad 	ext{vs.} \quad
-	ext{已有知识}
-\]
+$$
+\text{第一性原理}
+\quad \text{vs.} \quad
+\text{已有知识}
+$$
 
 而是：
 
-\[
+$$
 \boxed{
-	ext{第一性原理}
+\text{第一性原理}
 +
-	ext{已有知识}
+\text{已有知识}
 }
-\]
+$$
 
 已有知识告诉我们：
 
@@ -381,15 +380,15 @@ eg C
 
 可以概括为：
 
-\[
+$$
 \boxed{
-	ext{重要性}
+\text{重要性}
 \quad
-	ext{不确定性}
+\text{不确定性}
 \quad
-	ext{错误代价}
+\text{错误代价}
 }
-\]
+$$
 
 如果三个都很高，就值得深入追问。
 
@@ -415,19 +414,19 @@ eg C
 
 因此，一个更完整的思维过程可以写成：
 
-\[
+$$
 \boxed{
-	ext{继承已有知识}
-ightarrow
-	ext{识别关键假设}
-ightarrow
-	ext{必要时向下追问}
-ightarrow
-	ext{得到稳定解释}
-ightarrow
-	ext{重新封装并继续前进}
+\text{继承已有知识}
+\rightarrow
+\text{识别关键假设}
+\rightarrow
+\text{必要时向下追问}
+\rightarrow
+\text{得到稳定解释}
+\rightarrow
+\text{重新封装并继续前进}
 }
-\]
+$$
 
 最终，第一性原理最核心的价值并不是“创新”，而是：
 

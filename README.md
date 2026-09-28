@@ -25,15 +25,15 @@ last_reviewed:
 
 ## Formula formatting
 
-GitHub 上的 Markdown 笔记请用 `$...$` 书写行内公式，用单独成行的 `$$` 包围多行公式。例如：
+GitHub 上的 Markdown 笔记请用 `$...$` 书写行内公式，用 `math` 代码块书写独立公式。例如：
 
-```text
-行内：$y = \beta_0 + \beta_1 x$
+````text
+行内： $y = \beta_0 + \beta_1 x$
 
 独立公式：
-$$
+```math
 \hat\beta = (X^\top X)^{-1}X^\top y
-$$
 ```
+````
 
-不要使用 `\(...\)` 或 `\[...\]` 作为 Markdown 中的公式分隔符；提交前可在 GitHub 的文件预览中确认公式显示。
+行内公式前留一个空格；表格内公式的竖线使用 `\lvert` 和 `\rvert`。不要把多行公式放在单独成行的 `$$` 之间，也不要使用 `\(...\)` 或 `\[...\]` 作为 Markdown 中的公式分隔符；提交前可在 GitHub 的文件预览中确认公式显示。

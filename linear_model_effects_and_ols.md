@@ -30,9 +30,9 @@ last_reviewed:
 
 最简单的线性模型是：
 
-$$
+```math
 Y=\beta_0+\beta_1X+\epsilon
-$$
+```
 
 其中：
 
@@ -56,35 +56,35 @@ $$
 
 假设模型变成：
 
-$$
+```math
 Y=\beta_0+\beta_1X+\beta_2Condition+\epsilon
-$$
+```
 
 其中 condition 是一个分类变量。
 
 例如：
 
-$$
+```math
 Condition=
 \begin{cases}
 0,& A\\
 1,& B
 \end{cases}
-$$
+```
 
 那么：
 
 对于 condition A：
 
-$$
+```math
 Y=\beta_0+\beta_1X
-$$
+```
 
 对于 condition B：
 
-$$
+```math
 Y=(\beta_0+\beta_2)+\beta_1X
-$$
+```
 
 这意味着模型允许：
 
@@ -117,9 +117,9 @@ $$
 
 我们拟合：
 
-$$
+```math
 Y=\beta_0+\beta_1X+\beta_2Condition
-$$
+```
 
 ---
 
@@ -135,15 +135,15 @@ $$
 
 X 的均值：
 
-$$
+```math
 \bar X_A=2
-$$
+```
 
 Y 的均值：
 
-$$
+```math
 \bar Y_A=5
-$$
+```
 
 所以：
 
@@ -155,21 +155,21 @@ $$
 
 A condition 内部的数据可以写成：
 
-$$
+```math
 (-1,-2),(0,0),(1,2)
-$$
+```
 
 ---
 
 ## Condition B
 
-$$
+```math
 \bar X_B=5
-$$
+```
 
-$$
+```math
 \bar Y_B=14
-$$
+```
 
 所以：
 
@@ -181,21 +181,21 @@ $$
 
 B condition 内部同样是：
 
-$$
+```math
 (-1,-2),(0,0),(1,2)
-$$
+```
 
 因此，每个 condition 内部都告诉我们：
 
-$$
+```math
 X增加1 \Rightarrow Y增加2
-$$
+```
 
 所以：
 
-$$
+```math
 \boxed{\beta_1=2}
-$$
+```
 
 ---
 
@@ -205,9 +205,9 @@ $$
 
 设：
 
-$$
+```math
 Y_{ig}=\alpha_g+\beta X_{ig}+\epsilon_{ig}
-$$
+```
 
 其中：
 
@@ -217,50 +217,50 @@ $$
 
 对 condition $g$ 求平均：
 
-$$
+```math
 \bar Y_g=\alpha_g+\beta\bar X_g+\bar\epsilon_g
-$$
+```
 
 然后原式减去组平均：
 
-$$
+```math
 Y_{ig}-\bar Y_g
 =
 \beta(X_{ig}-\bar X_g)
 +
 (\epsilon_{ig}-\bar\epsilon_g)
-$$
+```
 
 注意：
 
-$$
+```math
 \alpha_g-\alpha_g=0
-$$
+```
 
 所以 condition 的基线差异被消掉了。
 
 模型实际上依赖的是：
 
-$$
+```math
 \boxed{
 Y_{ig}-\bar Y_g
 }
-$$
+```
 
 和
 
-$$
+```math
 \boxed{
 X_{ig}-\bar X_g
 }
-$$
+```
 
 也就是说：
 
 > 一个 observation 的 X，比它自己 condition 的平均 X 高多少；  
 > 一个 observation 的 Y，比它自己 condition 的平均 Y 高多少。
 
-因此，$\beta$ 反映的是：
+因此， $\beta$ 反映的是：
 
 > 在 condition 内部，当 X 高于该 condition 的平均水平时，Y 是否也倾向于高于该 condition 的平均水平。
 
@@ -272,7 +272,7 @@ $$
 
 对于分类 condition，X 的共同斜率可以写成：
 
-$$
+```math
 \boxed{
 \beta_1=
 \frac{
@@ -283,32 +283,32 @@ $$
 (X_{ig}-\bar X_g)^2
 }
 }
-$$
+```
 
 它和普通回归的斜率公式非常相似，只不过这里用的不是总体均值，而是每个 condition 自己的均值。
 
 普通回归：
 
-$$
+```math
 \beta_1=
 \frac{
 \sum(X_i-\bar X)(Y_i-\bar Y)
 }{
 \sum(X_i-\bar X)^2
 }
-$$
+```
 
 加入 condition 后：
 
-$$
+```math
 \bar X,\bar Y
-$$
+```
 
 变成了：
 
-$$
+```math
 \bar X_g,\bar Y_g
-$$
+```
 
 所以 slope 主要由 condition 内部的 variation 来决定。
 
@@ -318,9 +318,9 @@ $$
 
 已经知道：
 
-$$
+```math
 \beta_1=2
-$$
+```
 
 接下来 condition effect 的本质是：
 
@@ -328,53 +328,53 @@ $$
 
 对于 A：
 
-$$
+```math
 \bar Y_A=\beta_0+\beta_1\bar X_A
-$$
+```
 
 所以：
 
-$$
+```math
 \beta_0=\bar Y_A-\beta_1\bar X_A
-$$
+```
 
 代入数据：
 
-$$
+```math
 \beta_0=5-2\times2=1
-$$
+```
 
 因此 A 的回归线是：
 
-$$
+```math
 Y=1+2X
-$$
+```
 
 对于 B：
 
-$$
+```math
 \bar Y_B=(\beta_0+\beta_2)+\beta_1\bar X_B
-$$
+```
 
 代入：
 
-$$
+```math
 14=(1+\beta_2)+2\times5
-$$
+```
 
 得到：
 
-$$
+```math
 \beta_2=3
-$$
+```
 
 所以最终模型：
 
-$$
+```math
 \boxed{
 Y=1+2X+3Condition
 }
-$$
+```
 
 ---
 
@@ -382,7 +382,7 @@ $$
 
 condition effect 还可以写成：
 
-$$
+```math
 \boxed{
 \beta_2
 =
@@ -390,65 +390,65 @@ $$
 -
 \beta_1(\bar X_B-\bar X_A)
 }
-$$
+```
 
 这非常重要。
 
 它的含义是：
 
-$$
+```math
 \text{condition 的原始 Y 差异}
-$$
+```
 
 减去：
 
-$$
+```math
 \text{由于 X 不同而能够解释的 Y 差异}
-$$
+```
 
 剩下的才是：
 
-$$
+```math
 \text{调整 X 之后的 condition 差异}
-$$
+```
 
 在例子中：
 
 Y 的原始组间差异：
 
-$$
+```math
 14-5=9
-$$
+```
 
 X 的组间差异：
 
-$$
+```math
 5-2=3
-$$
+```
 
 X 每增加 1，Y 增加 2：
 
-$$
+```math
 \beta_1=2
-$$
+```
 
 所以 X 可以解释的组间 Y 差异：
 
-$$
+```math
 2\times3=6
-$$
+```
 
 因此 condition effect：
 
-$$
+```math
 9-6=3
-$$
+```
 
 即：
 
-$$
+```math
 \boxed{\beta_2=3}
-$$
+```
 
 ---
 
@@ -456,9 +456,9 @@ $$
 
 多元回归：
 
-$$
+```math
 Y\sim X+Condition
-$$
+```
 
 可以理解成：
 
@@ -472,9 +472,9 @@ condition 在问：
 
 所以多元回归中的参数不是“原始关系”，而是：
 
-$$
+```math
 \boxed{\text{partial effect / unique effect}}
-$$
+```
 
 即：
 
@@ -496,31 +496,31 @@ OLS 的全称是：
 
 模型预测值：
 
-$$
+```math
 \hat Y_i=\beta_0+\beta_1X_i+\beta_2C_i
-$$
+```
 
 每个 observation 的残差：
 
-$$
+```math
 e_i=Y_i-\hat Y_i
-$$
+```
 
 OLS 要找到一组参数：
 
-$$
+```math
 \beta_0,\beta_1,\beta_2
-$$
+```
 
 使得残差平方和：
 
-$$
+```math
 SSE=
 \sum_i
 \left[
 Y_i-(\beta_0+\beta_1X_i+\beta_2C_i)
 \right]^2
-$$
+```
 
 最小。
 
@@ -547,25 +547,25 @@ $$
 
 直到：
 
-$$
+```math
 SSE
-$$
+```
 
 最小。
 
 在最优解处：
 
-$$
+```math
 \frac{\partial SSE}{\partial\beta_0}=0
-$$
+```
 
-$$
+```math
 \frac{\partial SSE}{\partial\beta_1}=0
-$$
+```
 
-$$
+```math
 \frac{\partial SSE}{\partial\beta_2}=0
-$$
+```
 
 这三个条件共同决定最终的参数估计。
 
@@ -575,9 +575,9 @@ $$
 
 模型：
 
-$$
+```math
 Y\sim X+Condition
-$$
+```
 
 还可以等价地理解成三步。
 
@@ -585,63 +585,63 @@ $$
 
 用 condition 预测 X：
 
-$$
+```math
 X\sim Condition
-$$
+```
 
 得到 X 中无法被 condition 解释的部分：
 
-$$
+```math
 X_{residual}
-$$
+```
 
 ## 第二步
 
 用 condition 预测 Y：
 
-$$
+```math
 Y\sim Condition
-$$
+```
 
 得到 Y 中无法被 condition 解释的部分：
 
-$$
+```math
 Y_{residual}
-$$
+```
 
 ## 第三步
 
 做回归：
 
-$$
+```math
 Y_{residual}\sim X_{residual}
-$$
+```
 
 得到的 slope，和原模型中 X 的系数完全一样。
 
 对于分类 condition 来说：
 
-$$
+```math
 X_{residual}=X-\bar X_{condition}
-$$
+```
 
-$$
+```math
 Y_{residual}=Y-\bar Y_{condition}
-$$
+```
 
 所以：
 
-$$
+```math
 \beta_X
-$$
+```
 
 本质上是在研究：
 
-$$
+```math
 \boxed{
 \text{去掉 condition 差异以后，剩余 X 与剩余 Y 的关系}
 }
-$$
+```
 
 ---
 
@@ -651,15 +651,15 @@ $$
 
 ## 模型 1
 
-$$
+```math
 Y\sim X
-$$
+```
 
 这里：
 
-$$
+```math
 \beta_X
-$$
+```
 
 描述总体 X–Y 关系。
 
@@ -667,15 +667,15 @@ $$
 
 ## 模型 2
 
-$$
+```math
 Y\sim X+Condition
-$$
+```
 
 这里：
 
-$$
+```math
 \beta_X
-$$
+```
 
 描述控制 condition 后的 X–Y 关系。
 
@@ -683,15 +683,15 @@ $$
 
 ## 模型 3
 
-$$
+```math
 Y\sim X+Condition+Age
-$$
+```
 
 这里：
 
-$$
+```math
 \beta_X
-$$
+```
 
 描述：
 
@@ -699,11 +699,11 @@ $$
 
 因此：
 
-$$
+```math
 \boxed{
 同一个 X，在不同模型中，\beta_X 可以代表不同的统计效应。
 }
-$$
+```
 
 ---
 
@@ -711,9 +711,9 @@ $$
 
 如果模型是：
 
-$$
+```math
 Y\sim X+Condition
-$$
+```
 
 那么默认假设：
 
@@ -721,9 +721,9 @@ $$
 
 即：
 
-$$
+```math
 \beta_X
-$$
+```
 
 在所有 condition 中相同。
 
@@ -731,40 +731,40 @@ $$
 
 如果模型是：
 
-$$
+```math
 Y\sim X*Condition
-$$
+```
 
 展开后：
 
-$$
+```math
 Y=
 \beta_0
 +\beta_1X
 +\beta_2Condition
 +\beta_3(X\times Condition)
 +\epsilon
-$$
+```
 
 那么：
 
 在参考 condition 中：
 
-$$
+```math
 X\text{ slope}=\beta_1
-$$
+```
 
 在另一个 condition 中：
 
-$$
+```math
 X\text{ slope}=\beta_1+\beta_3
-$$
+```
 
 因此：
 
-$$
+```math
 \beta_3
-$$
+```
 
 反映：
 
@@ -772,17 +772,17 @@ $$
 
 所以：
 
-$$
+```math
 X+Condition
-$$
+```
 
 主要允许不同 condition 有不同截距。
 
 而：
 
-$$
+```math
 X*Condition
-$$
+```
 
 允许不同 condition 不仅有不同截距，还可以有不同 slope。
 
@@ -804,19 +804,19 @@ $$
 
 因此：
 
-$$
+```math
 \boxed{
 \text{参数的含义是模型依赖的}
 }
-$$
+```
 
 进一步说：
 
-$$
+```math
 \boxed{
 \text{统计模型不是简单地“发现效应”，而是在定义我们准备估计哪一种效应。}
 }
-$$
+```
 
 ---
 
@@ -824,9 +824,9 @@ $$
 
 不要只看：
 
-$$
+```math
 \beta=0.3,\quad p<0.05
-$$
+```
 
 而应该先问：
 
@@ -847,11 +847,11 @@ $$
 
 ### 1. 模型定义效应
 
-$$
+```math
 \boxed{
 \text{一个参数代表什么效应，由整个模型决定。}
 }
-$$
+```
 
 ---
 
@@ -865,9 +865,9 @@ $$
 
 ### 3. 对分类 condition 来说
 
-$$
+```math
 Y\sim X+Condition
-$$
+```
 
 可以理解为：
 
@@ -877,25 +877,25 @@ $$
 
 ### 4. X effect
 
-$$
+```math
 \boxed{
 \beta_X
 =
 \text{控制其他变量后，X 对 Y 的独特线性关系}
 }
-$$
+```
 
 ---
 
 ### 5. condition effect
 
-$$
+```math
 \boxed{
 \beta_{Condition}
 =
 \text{控制 X 后，不同 condition 之间剩余的平均差异}
 }
-$$
+```
 
 ---
 
@@ -903,11 +903,11 @@ $$
 
 OLS 的核心目标是：
 
-$$
+```math
 \boxed{
 \text{找到一组参数，使残差平方和最小}
 }
-$$
+```
 
 ---
 
@@ -915,7 +915,7 @@ $$
 
 理解线性模型时，可以按照下面的顺序思考：
 
-$$
+```math
 \boxed{
 \text{数据结构}
 \rightarrow
@@ -929,17 +929,17 @@ $$
 \rightarrow
 \text{参数因此代表什么}
 }
-$$
+```
 
 相比于：
 
-$$
+```math
 \text{跑模型}
 \rightarrow
 \beta
 \rightarrow
 p
-$$
+```
 
 前一种思维方式更接近统计建模真正的逻辑。
 

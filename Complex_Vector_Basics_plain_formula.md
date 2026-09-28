@@ -12,11 +12,15 @@ last_reviewed:
 
 二维实向量：
 
-    v = (x, y)
+```math
+\mathbf{v}=(x,y)
+```
 
 可以表示为复数：
 
-    z = x + yj
+```math
+z=x+yj
+```
 
 其中：
 
@@ -26,11 +30,15 @@ last_reviewed:
 
 满足：
 
-    j^2 = -1
+```math
+j^2=-1
+```
 
 因此：
 
-    (x, y)  <=>  x + yj
+```math
+(x,y)\longleftrightarrow x+yj
+```
 
 二者表示同一个二维方向和长度。
 
@@ -40,7 +48,9 @@ last_reviewed:
 
 复数：
 
-    z = a + bj
+```math
+z=a+bj
+```
 
 对应复平面：
 
@@ -49,19 +59,27 @@ last_reviewed:
 
 例如：
 
-    z = 3 + 4j
+```math
+z=3+4j
+```
 
 等价于二维向量：
 
-    (3, 4)
+```math
+(3,4)
+```
 
 长度：
 
-    |z| = sqrt(3^2 + 4^2)
+```math
+|z|=\sqrt{3^2+4^2}=5
+```
 
 方向：
 
-    theta = arctan(4/3)
+```math
+\theta=\arctan\!\left(\frac{4}{3}\right)
+```
 
 因此复数天然包含：
 
@@ -74,7 +92,9 @@ last_reviewed:
 
 复数也可以写成：
 
-    z = r * exp(j*theta)
+```math
+z=r\,e^{j\theta}
+```
 
 其中：
 
@@ -83,32 +103,39 @@ last_reviewed:
 
 欧拉公式：
 
-    exp(j*theta) = cos(theta) + j*sin(theta)
+```math
+e^{j\theta}=\cos\theta+j\sin\theta
+```
 
 例如：
 
-    exp(j*60°)
+```math
+e^{j60^\circ}
+```
 
 展开：
 
-    = cos(60°) + j*sin(60°)
+```math
+e^{j60^\circ}=\cos 60^\circ+j\sin 60^\circ
+```
 
 因为：
 
-    cos(60°)=0.5
-    sin(60°)=0.866
+```math
+\cos 60^\circ=0.5,\qquad \sin 60^\circ\approx0.866
+```
 
 所以：
 
-    exp(j*60°)=0.5+0.866j
+```math
+e^{j60^\circ}\approx0.5+0.866j
+```
 
 因此：
 
-    (0.5,0.866)
-    =
-    0.5+0.866j
-    =
-    exp(j*60°)
+```math
+(0.5,0.866)\longleftrightarrow 0.5+0.866j\approx e^{j60^\circ}
+```
 
 表示同一个单位方向向量。
 
@@ -120,23 +147,31 @@ last_reviewed:
 
 例如：
 
-    10° 和 350°
+```math
+10^\circ\quad\text{和}\quad350^\circ
+```
 
 普通平均：
 
-    (10+350)/2 = 180°
+```math
+\frac{10^\circ+350^\circ}{2}=180^\circ
+```
 
 这是错误的。
 
 因为：
 
-    0° = 360°
+```math
+0^\circ=360^\circ
+```
 
 角度具有周期性。
 
 复向量通过：
 
-    theta -> exp(j*theta)
+```math
+\theta\longmapsto e^{j\theta}
+```
 
 将角度转换成单位向量。
 
@@ -148,23 +183,33 @@ last_reviewed:
 
 对于多个角度：
 
-    theta_1, theta_2, ..., theta_n
+```math
+\theta_1,\theta_2,\ldots,\theta_n
+```
 
 转换为：
 
-    z_k = exp(j*theta_k)
+```math
+z_k=e^{j\theta_k}
+```
 
 求和：
 
-    Z = sum(exp(j*theta_k))
+```math
+Z=\sum_{k=1}^{n}e^{j\theta_k}
+```
 
 平均方向：
 
-    mean_theta = arg(Z)
+```math
+\bar\theta=\operatorname{arg}(Z)
+```
 
 集中程度：
 
-    MRL = |Z| / n
+```math
+\mathrm{MRL}=\frac{|Z|}{n}
+```
 
 其中：
 
@@ -178,11 +223,13 @@ MRL（mean resultant length）表示方向集中程度。
 
 例如：
 
-    60°, 65°, 70°
+```math
+60^\circ,\;65^\circ,\;70^\circ
+```
 
 向量方向一致：
 
-    MRL 接近 1
+此时 MRL 接近 1。
 
 表示高度集中。
 
@@ -190,11 +237,13 @@ MRL（mean resultant length）表示方向集中程度。
 
 例如：
 
-    0°, 120°, 240°
+```math
+0^\circ,\;120^\circ,\;240^\circ
+```
 
 向量相互抵消：
 
-    MRL 接近 0
+此时 MRL 接近 0。
 
 表示没有稳定方向。
 
@@ -204,7 +253,9 @@ MRL（mean resultant length）表示方向集中程度。
 
 当不同观测的重要性不同，可以加入权重：
 
-    Z = sum(w_k * exp(j*theta_k))
+```math
+Z=\sum_{k=1}^{n}w_k e^{j\theta_k}
+```
 
 其中：
 
@@ -230,23 +281,31 @@ MRL（mean resultant length）表示方向集中程度。
 
 因此：
 
-    theta -> exp(j*theta)
+```math
+\theta\longmapsto e^{j\theta}
+```
 
 得到：
 
-    Z = sum(exp(j*theta))
+```math
+Z=\sum_{k=1}^{n}e^{j\theta_k}
+```
 
 其中：
 
 方向：
 
-    phase = arg(Z)
+```math
+\text{phase}=\operatorname{arg}(Z)
+```
 
 表示平均偏好相位。
 
 长度：
 
-    MRL = |Z|
+```math
+\mathrm{MRL}=\frac{|Z|}{n}
+```
 
 表示相位集中程度。
 
@@ -256,22 +315,28 @@ MRL（mean resultant length）表示方向集中程度。
 
 首先得到相位 bin 概率：
 
-    p(k)
+```math
+p(k)
+```
 
 每个相位 bin：
 
-    exp(j*theta(k))
+```math
+e^{j\theta(k)}
+```
 
 复向量：
 
-    z = sum(p(k)*exp(j*theta(k)))
+```math
+z=\sum_k p(k)e^{j\theta(k)}
+```
 
 展开：
 
-    z =
-    sum(p(k)*cos(theta(k)))
-    +
-    j*sum(p(k)*sin(theta(k)))
+```math
+z=\sum_k p(k)\cos\theta(k)
+  +j\sum_k p(k)\sin\theta(k)
+```
 
 其中：
 
@@ -280,24 +345,30 @@ MRL（mean resultant length）表示方向集中程度。
 
 最终：
 
-    preferred phase = arg(z)
+```math
+\text{preferred phase}=\operatorname{arg}(z)
+```
 
-    phase concentration = |z|
+```math
+\text{phase concentration}=|z|
+```
 
 ------------------------------------------------------------------------
 
 # 9. 复向量与普通向量的关系
 
-             普通向量       复向量
-  ---------- -------------- ----------------------
-  表示       (x,y)          x+yj
-  空间       二维空间       复平面
-  包含信息   长度+方向      长度+方向
-  优势       一般空间问题   旋转、相位、周期问题
+| | 普通向量 | 复向量 |
+|---|---|---|
+| 表示 | $(x,y)$ | $x+yj$ |
+| 空间 | 二维空间 | 复平面 |
+| 包含信息 | 长度 + 方向 | 长度 + 方向 |
+| 优势 | 一般空间问题 | 旋转、相位、周期问题 |
 
 数学上：
 
-    (x,y) = x+yj
+```math
+(x,y)\longleftrightarrow x+yj
+```
 
 二者等价。
 
@@ -309,16 +380,15 @@ MRL（mean resultant length）表示方向集中程度。
 
 复向量的核心思想：
 
-    角度
-      |
-      v
-    exp(j*theta)
-      |
-      v
-    复向量加和
-      |
-      v
-    平均方向 + 集中程度
+```text
+角度
+  ↓
+单位复向量
+  ↓
+复向量加和
+  ↓
+平均方向 + 集中程度
+```
 
 在神经振荡研究中：
 

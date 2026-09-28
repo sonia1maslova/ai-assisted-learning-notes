@@ -20,15 +20,21 @@ autocorrelation），需要构造保持空间组织特征的零分布。
 
 计算：
 
-r_obs = cor(X, Y)
+```math
+r_{\mathrm{obs}} = \operatorname{corr}(X,Y)
+```
 
 然后生成大量空间保持的替代图：
 
-X_null
+```math
+X_{\mathrm{null}}
+```
 
 比较：
 
-cor(X_null, Y)
+```math
+\operatorname{corr}(X_{\mathrm{null}},Y)
+```
 
 判断真实相关是否超过空间结构预期。
 
@@ -43,19 +49,25 @@ Moran
 
 首先建立：
 
-W = spatial weight matrix
+```math
+W = \text{spatial weight matrix}
+```
 
 其中邻近脑区具有更高权重。
 
 随后进行空间谱分解：
 
-X = Eβ
+```math
+X = E\boldsymbol{\beta}
+```
 
 其中 E 为 Moran eigenvectors。
 
 随机改变空间成分 β，生成：
 
-X_null = Eβ_null
+```math
+X_{\mathrm{null}} = E\boldsymbol{\beta}_{\mathrm{null}}
+```
 
 ## 保留特征
 
@@ -94,7 +106,9 @@ Spin test 专门用于皮层表面数据。
 
 旋转：
 
-x' = R x
+```math
+x' = Rx
+```
 
 其中 R 为随机旋转矩阵。
 
@@ -157,13 +171,17 @@ Spin index matrix
 
 例如：
 
-360 × 10000
+```math
+360 \times 10\,000
+```
 
 每一列代表一次空间旋转。
 
 生成替代脑图：
 
-X_null = X\[spin_indices\]
+```math
+X_{\mathrm{null}}=X[\text{spin indices}]
+```
 
 ## 保留特征
 
@@ -194,15 +212,21 @@ BrainSMASH通过模拟空间距离结构生成替代脑图。
 
 例如 variogram：
 
-γ(d)
+```math
+\gamma(d)
+```
 
 然后生成新的地图，使：
 
-γ_null(d)
+```math
+\gamma_{\mathrm{null}}(d)
+```
 
 接近：
 
-γ_original(d)
+```math
+\gamma_{\mathrm{original}}(d)
+```
 
 ## 保留特征
 
@@ -220,12 +244,12 @@ BrainSMASH通过模拟空间距离结构生成替代脑图。
 
 # 6. 四种方法比较
 
-  方法                   空间基础         保留特征            常用场景
-  ---------------------- ---------------- ------------------- ------------------
-  Moran                  空间邻接矩阵     Moran's I           MNI/volume/ROI
-  Alexander-Bloch spin   球面旋转         cortical topology   surface cortex
-  VASA spin              parcel球面旋转   parcel空间结构      Glasser/Schaefer
-  BrainSMASH             距离模型         variogram           通用空间地图
+| 方法 | 空间基础 | 保留特征 | 常用场景 |
+|---|---|---|---|
+| Moran | 空间邻接矩阵 | Moran's I | MNI/volume/ROI |
+| Alexander-Bloch spin | 球面旋转 | cortical topology | surface cortex |
+| VASA spin | parcel 球面旋转 | parcel 空间结构 | Glasser/Schaefer |
+| BrainSMASH | 距离模型 | variogram | 通用空间地图 |
 
 ------------------------------------------------------------------------
 
@@ -285,10 +309,14 @@ Neural pleiotropy map
 
 真实相关：
 
-cor(X_NP,Y)
+```math
+\operatorname{corr}(X_{\mathrm{NP}},Y)
+```
 
 是否超过：
 
-cor(X_null,Y)
+```math
+\operatorname{corr}(X_{\mathrm{null}},Y)
+```
 
 产生的空间期望范围。

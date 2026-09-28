@@ -6,7 +6,7 @@ last_reviewed:
 
 # 圆周分布聚合与复向量平均的数学等价性
 
-> 本文中的公式使用 Unicode 字符和纯文本公式块书写，不依赖 LaTeX、MathJax 或其他公式插件。
+> 本文中的公式使用 GitHub Markdown 支持的 `math` 代码块显示。
 
 ## 1. 问题
 
@@ -31,33 +31,33 @@ last_reviewed:
 
 样本 i 的原始总量为：
 
-```text
-S(i) = Σ[k=1…K] a(i,k)       且 S(i) > 0
+```math
+S(i)=\sum_{k=1}^{K}a(i,k),\qquad S(i)>0
 ```
 
 对每个样本分别归一化：
 
-```text
-p(i,k) = a(i,k) / S(i)
+```math
+p(i,k)=\frac{a(i,k)}{S(i)}
 ```
 
 因此，每个样本的归一化分布之和为 1：
 
-```text
-Σ[k=1…K] p(i,k) = 1
+```math
+\sum_{k=1}^{K}p(i,k)=1
 ```
 
 样本 i 的复向量定义为：
 
-```text
-z(i) = Σ[k=1…K] p(i,k) · exp(jθ(k))
+```math
+z(i)=\sum_{k=1}^{K}p(i,k)e^{j\theta(k)}
 ```
 
 也可写成实部和虚部：
 
-```text
-z(i) = Σ[k=1…K] p(i,k) · cos(θ(k))
-     + j · Σ[k=1…K] p(i,k) · sin(θ(k))
+```math
+z(i)=\sum_{k=1}^{K}p(i,k)\cos\theta(k)
+    +j\sum_{k=1}^{K}p(i,k)\sin\theta(k)
 ```
 
 其中：
@@ -72,32 +72,33 @@ z(i) = Σ[k=1…K] p(i,k) · cos(θ(k))
 
 首先对 N 个已归一化的分布逐分箱平均：
 
-```text
-p̄(k) = (1/N) · Σ[i=1…N] p(i,k)
+```math
+\bar p(k)=\frac{1}{N}\sum_{i=1}^{N}p(i,k)
 ```
 
 平均分布仍然是归一化分布：
 
-```text
-Σ[k=1…K] p̄(k)
-= (1/N) · Σ[i=1…N] Σ[k=1…K] p(i,k)
-= (1/N) · N
-= 1
+```math
+\begin{aligned}
+\sum_{k=1}^{K}\bar p(k)
+&=\frac{1}{N}\sum_{i=1}^{N}\sum_{k=1}^{K}p(i,k)\\
+&=\frac{1}{N}\cdot N\\
+&=1.
+\end{aligned}
 ```
 
 因此，通常不需要再对平均分布归一化。
 
 由平均分布得到集体复向量：
 
-```text
-z(A) = Σ[k=1…K] p̄(k) · exp(jθ(k))
+```math
+z(A)=\sum_{k=1}^{K}\bar p(k)e^{j\theta(k)}
 ```
 
 集体偏好方向和集中度为：
 
-```text
-μ(A) = arg(z(A))
-R(A) = |z(A)|
+```math
+\mu(A)=\operatorname{arg}(z(A)),\qquad R(A)=|z(A)|
 ```
 
 ---
@@ -106,21 +107,20 @@ R(A) = |z(A)|
 
 先把每个归一化分布转换为复向量：
 
-```text
-z(i) = Σ[k=1…K] p(i,k) · exp(jθ(k))
+```math
+z(i)=\sum_{k=1}^{K}p(i,k)e^{j\theta(k)}
 ```
 
 再对 N 个复向量等权平均：
 
-```text
-z(B) = (1/N) · Σ[i=1…N] z(i)
+```math
+z(B)=\frac{1}{N}\sum_{i=1}^{N}z(i)
 ```
 
 集体偏好方向和集中度为：
 
-```text
-μ(B) = arg(z(B))
-R(B) = |z(B)|
+```math
+\mu(B)=\operatorname{arg}(z(B)),\qquad R(B)=|z(B)|
 ```
 
 这里平均的是完整复向量，不是对偏好角度做普通算术平均。
@@ -131,38 +131,36 @@ R(B) = |z(B)|
 
 将方法 A 中的平均分布展开：
 
-```text
+```math
+\begin{aligned}
 z(A)
-= Σ[k=1…K] p̄(k) · exp(jθ(k))
-
-= Σ[k=1…K] [(1/N) · Σ[i=1…N] p(i,k)] · exp(jθ(k))
-
-= (1/N) · Σ[i=1…N] Σ[k=1…K] p(i,k) · exp(jθ(k))
-
-= (1/N) · Σ[i=1…N] z(i)
-
-= z(B)
+&=\sum_{k=1}^{K}\bar p(k)e^{j\theta(k)}\\
+&=\sum_{k=1}^{K}\left[\frac{1}{N}\sum_{i=1}^{N}p(i,k)\right]e^{j\theta(k)}\\
+&=\frac{1}{N}\sum_{i=1}^{N}\sum_{k=1}^{K}p(i,k)e^{j\theta(k)}\\
+&=\frac{1}{N}\sum_{i=1}^{N}z(i)\\
+&=z(B).
+\end{aligned}
 ```
 
 第三行只是交换了两个有限求和的顺序。从分布到复向量的转换：
 
-```text
-(p(1), p(2), …, p(K)) → Σ[k=1…K] p(k) · exp(jθ(k))
+```math
+(p(1),p(2),\ldots,p(K))
+\longmapsto \sum_{k=1}^{K}p(k)e^{j\theta(k)}
 ```
 
 是线性运算，所以它和平均运算可以交换顺序。
 
 因为：
 
-```text
-z(A) = z(B)
+```math
+z(A)=z(B)
 ```
 
 所以两种方法得到的整个复向量相同，不仅是偏好方向相同：
 
-```text
-μ(A) = μ(B)
-R(A) = R(B)
+```math
+\mu(A)=\mu(B),\qquad R(A)=R(B)
 ```
 
 如果聚合向量恰好为零，两种方法都得到零向量，偏好方向也都未定义。
@@ -173,8 +171,8 @@ R(A) = R(B)
 
 每个分箱中心都对应一个圆周上的单位向量：
 
-```text
-exp(jθ(k)) = cos(θ(k)) + j · sin(θ(k))
+```math
+e^{j\theta(k)}=\cos\theta(k)+j\sin\theta(k)
 ```
 
 `p(i,k)` 是样本 i 给第 k 个单位向量的权重。“先平均每个分箱的权重”与“先按各自权重得到向量，再平均向量”只是改变了加法顺序，所以结果不变。
@@ -185,21 +183,21 @@ exp(jθ(k)) = cos(θ(k)) + j · sin(θ(k))
 
 设样本 i 的聚合权重是 w(i)：
 
-```text
-w(i) ≥ 0
-Σ[i=1…N] w(i) = 1
+```math
+w(i)\geq 0,\qquad \sum_{i=1}^{N}w(i)=1
 ```
 
 如果两种方法使用完全相同的 w(i)，则：
 
-```text
-p̄w(k) = Σ[i=1…N] w(i) · p(i,k)
-
+```math
+\begin{aligned}
+\bar p_w(k)&=\sum_{i=1}^{N}w(i)p(i,k),\\[4pt]
 z(A,w)
-= Σ[k=1…K] p̄w(k) · exp(jθ(k))
-= Σ[i=1…N] w(i) · Σ[k=1…K] p(i,k) · exp(jθ(k))
-= Σ[i=1…N] w(i) · z(i)
-= z(B,w)
+&=\sum_{k=1}^{K}\bar p_w(k)e^{j\theta(k)}\\
+&=\sum_{i=1}^{N}w(i)\sum_{k=1}^{K}p(i,k)e^{j\theta(k)}\\
+&=\sum_{i=1}^{N}w(i)z(i)\\
+&=z(B,w).
+\end{aligned}
 ```
 
 因此，关键不是必须等权，而是两种方法必须使用同一组权重。
@@ -226,14 +224,16 @@ z(A,w)
 
 如果不对每个样本先归一化，而是计算：
 
-```text
-p̃(k) = Σ[i=1…N] a(i,k) / Σ[i=1…N] Σ[k=1…K] a(i,k)
+```math
+\tilde p(k)=
+\frac{\sum_{i=1}^{N}a(i,k)}{\sum_{i=1}^{N}\sum_{r=1}^{K}a(i,r)}
 ```
 
 它等于：
 
-```text
-p̃(k) = Σ[i=1…N] { S(i) / Σ[r=1…N] S(r) } · p(i,k)
+```math
+\tilde p(k)=\sum_{i=1}^{N}
+\frac{S(i)}{\sum_{r=1}^{N}S(r)}p(i,k)
 ```
 
 这不是对各归一化分布等权平均，而是按样本总量 S(i) 加权。总量越大的样本对结果影响越大。
@@ -246,8 +246,8 @@ p̃(k) = Σ[i=1…N] { S(i) / Σ[r=1…N] S(r) } · p(i,k)
 
 如果把 `z(i)` 替换为：
 
-```text
-z(i) / |z(i)|
+```math
+\frac{z(i)}{|z(i)|}
 ```
 
 就会保留每个样本的方向，但删除其自身的集中度。这改变了统计目标，不再等价于平均原始的归一化分布。

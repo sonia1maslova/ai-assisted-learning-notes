@@ -123,8 +123,8 @@ y-\hat y
 例如均方误差：
 
 ```math
-Loss=
-\frac1n\sum(y_i-\hat y_i)^2
+\operatorname{MSE}=
+\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat y_i)^2
 ```
 
 目标：
@@ -142,7 +142,7 @@ Loss=
 已知参数，预测数据：
 
 ```math
-P(data|\theta)
+P(\mathrm{data}\mid\theta)
 ```
 
 问题：
@@ -156,7 +156,7 @@ P(data|\theta)
 已知数据，评价参数：
 
 ```math
-L(\theta|data)
+L(\theta\mid\mathrm{data})
 ```
 
 问题：
@@ -245,7 +245,7 @@ argmin描述目标：
 公式：
 
 ```math
-\theta=\theta-\eta\nabla L
+\theta=\theta-\eta\nabla_{\theta}L(\theta)
 ```
 
 解释：
@@ -259,7 +259,7 @@ argmin描述目标：
 因为目标是下降，所以沿梯度反方向移动：
 
 ```math
--\nabla L
+-\nabla_{\theta}L(\theta)
 ```
 
 ---
@@ -340,9 +340,9 @@ Y=X\beta+Zu+\epsilon
 贝叶斯公式：
 
 ```math
-P(\theta|data)
+P(\theta\mid\mathrm{data})
 \propto
-P(data|\theta)P(\theta)
+P(\mathrm{data}\mid\theta)P(\theta)
 ```
 
 三个部分：
@@ -358,7 +358,7 @@ P(\theta)
 ## Likelihood
 
 ```math
-P(data|\theta)
+P(\mathrm{data}\mid\theta)
 ```
 
 数据对参数的支持。
@@ -366,7 +366,7 @@ P(data|\theta)
 ## Posterior
 
 ```math
-P(\theta|data)
+P(\theta\mid\mathrm{data})
 ```
 
 结合数据后的参数分布。

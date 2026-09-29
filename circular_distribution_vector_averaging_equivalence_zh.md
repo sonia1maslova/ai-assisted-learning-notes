@@ -98,7 +98,7 @@ z(A)=\sum_{k=1}^{K}\bar p(k)e^{j\theta(k)}
 集体偏好方向和集中度为：
 
 ```math
-\mu(A)=\operatorname{arg}(z(A)),\qquad R(A)=|z(A)|
+\mu(A)=\mathrm{arg}(z(A)),\qquad R(A)=|z(A)|
 ```
 
 ---
@@ -120,7 +120,7 @@ z(B)=\frac{1}{N}\sum_{i=1}^{N}z(i)
 集体偏好方向和集中度为：
 
 ```math
-\mu(B)=\operatorname{arg}(z(B)),\qquad R(B)=|z(B)|
+\mu(B)=\mathrm{arg}(z(B)),\qquad R(B)=|z(B)|
 ```
 
 这里平均的是完整复向量，不是对偏好角度做普通算术平均。

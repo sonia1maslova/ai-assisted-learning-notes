@@ -123,7 +123,7 @@ y-\hat y
 例如均方误差：
 
 ```math
-\operatorname{MSE}=
+\mathrm{MSE}=
 \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat y_i)^2
 ```
 
@@ -174,7 +174,7 @@ L(\theta\mid\mathrm{data})
 找到让数据出现概率最大的参数：
 
 ```math
-\theta^*=\operatorname{argmax}_\theta L(\theta)
+\theta^*=\mathrm{argmax}_\theta L(\theta)
 ```
 
 含义：
@@ -196,7 +196,7 @@ argument of minimum
 例如：
 
 ```math
-\theta^*=\operatorname{argmin}_\theta L(\theta)
+\theta^*=\mathrm{argmin}_\theta L(\theta)
 ```
 
 含义：
@@ -214,7 +214,7 @@ argument of minimum
 例如：
 
 ```math
-\theta^*=\operatorname{argmax}_\theta L(\theta)
+\theta^*=\mathrm{argmax}_\theta L(\theta)
 ```
 
 含义：

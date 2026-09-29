@@ -191,7 +191,7 @@ MLE 不问：
 数学：
 
 ```math
-\hat{\theta}=\operatorname{argmax}_\theta L(\theta)
+\hat{\theta}=\mathrm{argmax}_\theta L(\theta)
 ```
 
 其中：

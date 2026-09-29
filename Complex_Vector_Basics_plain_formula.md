@@ -202,7 +202,7 @@ Z=\sum_{k=1}^{n}e^{j\theta_k}
 平均方向：
 
 ```math
-\bar\theta=\operatorname{arg}(Z)
+\bar\theta=\mathrm{arg}(Z)
 ```
 
 集中程度：
@@ -296,7 +296,7 @@ Z=\sum_{k=1}^{n}e^{j\theta_k}
 方向：
 
 ```math
-\text{phase}=\operatorname{arg}(Z)
+\text{phase}=\mathrm{arg}(Z)
 ```
 
 表示平均偏好相位。
@@ -346,7 +346,7 @@ z=\sum_k p(k)\cos\theta(k)
 最终：
 
 ```math
-\text{preferred phase}=\operatorname{arg}(z)
+\text{preferred phase}=\mathrm{arg}(z)
 ```
 
 ```math

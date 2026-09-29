@@ -21,7 +21,7 @@ autocorrelation），需要构造保持空间组织特征的零分布。
 计算：
 
 ```math
-r_{\mathrm{obs}} = \operatorname{corr}(X,Y)
+r_{\mathrm{obs}} = \mathrm{corr}(X,Y)
 ```
 
 然后生成大量空间保持的替代图：
@@ -33,7 +33,7 @@ X_{\mathrm{null}}
 比较：
 
 ```math
-\operatorname{corr}(X_{\mathrm{null}},Y)
+\mathrm{corr}(X_{\mathrm{null}},Y)
 ```
 
 判断真实相关是否超过空间结构预期。
@@ -310,13 +310,13 @@ Neural pleiotropy map
 真实相关：
 
 ```math
-\operatorname{corr}(X_{\mathrm{NP}},Y)
+\mathrm{corr}(X_{\mathrm{NP}},Y)
 ```
 
 是否超过：
 
 ```math
-\operatorname{corr}(X_{\mathrm{null}},Y)
+\mathrm{corr}(X_{\mathrm{null}},Y)
 ```
 
 产生的空间期望范围。

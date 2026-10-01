@@ -7,10 +7,10 @@
 - 单个观测的期望与方差
 - 同组观测之间为什么会有协方差
 - ICC 与随机截距方差的关系
-- 方差—协方差矩阵 \(V\) 的来源
-- 一般矩阵形式 \(Y=X\beta+Zu+\varepsilon\)
-- 为什么 \(V=ZGZ^\top+R\)
-- 为什么 \(Y\sim N(X\beta,V)\)
+- 方差—协方差矩阵 $V$ 的来源
+- 一般矩阵形式 $Y=X\beta+Zu+\varepsilon$
+- 为什么 $V=ZGZ^\top+R$
+- 为什么 $Y\sim N(X\beta,V)$
 - 多元正态密度如何变成似然函数
 - 为什么要取对数得到 log-likelihood
 - GLS 固定效应估计公式的来源
@@ -30,14 +30,14 @@ Y_{ij}=\beta_0+u_j+\varepsilon_{ij}
 
 其中：
 
-- \(i\)：第 \(j\) 个 group 内的第 \(i\) 个 observation；
-- \(j\)：group 的编号；
-- \(Y_{ij}\)：第 \(j\) 个 group 中第 \(i\) 个 observation；
-- \(\beta_0\)：所有 group 共享的总体截距；
-- \(u_j\)：第 \(j\) 个 group 相对于总体截距的额外偏移，即随机截距；
-- \(\varepsilon_{ij}\)：第 \(j\) 个 group 中第 \(i\) 个 observation 自身的残差。
+- $i$：第 $j$ 个 group 内的第 $i$ 个 observation；
+- $j$：group 的编号；
+- $Y_{ij}$：第 $j$ 个 group 中第 $i$ 个 observation；
+- $\beta_0$：所有 group 共享的总体截距；
+- $u_j$：第 $j$ 个 group 相对于总体截距的额外偏移，即随机截距；
+- $\varepsilon_{ij}$：第 $j$ 个 group 中第 $i$ 个 observation 自身的残差。
 
-因此，第 \(j\) 个 group 自己的截距为：
+因此，第 $j$ 个 group 自己的截距为：
 
 ```math
 \beta_0+u_j
@@ -80,7 +80,7 @@ u_j\sim N(0,\sigma_u^2)
 表示：
 
 - 所有 group 的随机截距围绕 0 分布；
-- 随机截距之间的总体差异由 \(\sigma_u^2\) 描述。
+- 随机截距之间的总体差异由 $\sigma_u^2$ 描述。
 
 其中：
 
@@ -108,7 +108,7 @@ u_j\sim N(0,\sigma_u^2)
 E(u_j)=0
 ```
 
-是因为总体平均水平已经由 \(\beta_0\) 表示，\(u_j\) 只负责描述每个 group 相对总体均值的偏移。
+是因为总体平均水平已经由 $\beta_0$ 表示，$u_j$ 只负责描述每个 group 相对总体均值的偏移。
 
 ---
 
@@ -156,7 +156,7 @@ E(Y_{ij})=\beta_0
 }
 ```
 
-也就是说，从整个 group population 的角度看，一个 observation 的总体期望就是总体截距 \(\beta_0\)。
+也就是说，从整个 group population 的角度看，一个 observation 的总体期望就是总体截距 $\beta_0$。
 
 ---
 
@@ -170,7 +170,7 @@ Y_{ij}=\beta_0+u_j+\varepsilon_{ij}
 
 出发。
 
-由于 \(\beta_0\) 是常数：
+由于 $\beta_0$ 是常数：
 
 ```math
 \mathrm{Var}(\beta_0)=0
@@ -240,7 +240,7 @@ Y_{ij}=\beta_0+u_j+\varepsilon_{ij}
 
 # 5. 同一个 group 的两个 observation 为什么会相关？
 
-考虑同一个 group \(j\) 中两个 observation：
+考虑同一个 group $j$ 中两个 observation：
 
 ```math
 Y_{1j}
@@ -260,7 +260,7 @@ Y_{2j}
 u_j
 ```
 
-所以当某个 group 的 \(u_j\) 较高时：
+所以当某个 group 的 $u_j$ 较高时：
 
 ```math
 Y_{1j}
@@ -274,13 +274,13 @@ Y_{2j}
 
 都会被同时往上推。
 
-当某个 group 的 \(u_j\) 较低时，它们又会一起被往下拉。
+当某个 group 的 $u_j$ 较低时，它们又会一起被往下拉。
 
 因此，同一 group 内的 observation 会产生相关性。
 
 ---
 
-# 6. \(Y_{1j}\) 和 \(Y_{2j}\) 中的 \(j\) 到底是什么意思？
+# 6. $Y_{1j}$ 和 $Y_{2j}$ 中的 $j$ 到底是什么意思？
 
 这里：
 
@@ -288,7 +288,7 @@ Y_{2j}
 Y_{1j}
 ```
 
-表示第 \(j\) 个 group 的第 1 个 observation，
+表示第 $j$ 个 group 的第 1 个 observation，
 
 而：
 
@@ -296,9 +296,9 @@ Y_{1j}
 Y_{2j}
 ```
 
-表示同一个第 \(j\) 个 group 的第 2 个 observation。
+表示同一个第 $j$ 个 group 的第 2 个 observation。
 
-所以一对里面的 \(j\) 一定相同。
+所以一对里面的 $j$ 一定相同。
 
 例如：
 
@@ -322,11 +322,11 @@ Y_{2j}
 
 如果把很多 group 排成表：
 
-| Group \(j\) | \(Y_{1j}\) | \(Y_{2j}\) |
+| Group $j$ | $Y_{1j}$ | $Y_{2j}$ |
 |---|---:|---:|
-| 1 | \(Y_{11}\) | \(Y_{21}\) |
-| 2 | \(Y_{12}\) | \(Y_{22}\) |
-| 3 | \(Y_{13}\) | \(Y_{23}\) |
+| 1 | $Y_{11}$ | $Y_{21}$ |
+| 2 | $Y_{12}$ | $Y_{22}$ |
+| 3 | $Y_{13}$ | $Y_{23}$ |
 | ... | ... | ... |
 
 那么可以把它直观理解成两列配对数据：
@@ -345,11 +345,11 @@ Y_{21},Y_{22},Y_{23},\ldots
 
 因此：
 
-> \(j\) 在每一对内部相同，但在不同 pair 之间变化。
+> $j$ 在每一对内部相同，但在不同 pair 之间变化。
 
 ---
 
-# 7. 为什么同组两个随机变量的协方差等于 \(\sigma_u^2\)？
+# 7. 为什么同组两个随机变量的协方差等于 $\sigma_u^2$？
 
 计算：
 
@@ -367,7 +367,7 @@ Y_{1j}=\beta_0+u_j+\varepsilon_{1j}
 Y_{2j}=\beta_0+u_j+\varepsilon_{2j}
 ```
 
-因为常数 \(\beta_0\) 不影响协方差：
+因为常数 $\beta_0$ 不影响协方差：
 
 ```math
 \mathrm{Cov}(Y_{1j},Y_{2j})
@@ -496,7 +496,7 @@ u_j\perp\varepsilon_{ij}
 
 直观上：
 
-> 两个 observation 真正共同拥有的随机成分只有 \(u_j\)，因此它们共同变化的那一部分，正是随机截距的变异。
+> 两个 observation 真正共同拥有的随机成分只有 $u_j$，因此它们共同变化的那一部分，正是随机截距的变异。
 
 ---
 
@@ -514,7 +514,7 @@ u_j\perp\varepsilon_{ij}
 \mathrm{Cov}(Y_{1j},Y_{2j})
 ```
 
-如果已经固定了某个具体 group 的 \(u_j\)，那么：
+如果已经固定了某个具体 group 的 $u_j$，那么：
 
 ```math
 Y_{1j}
@@ -544,7 +544,7 @@ Y_{2j}
 }
 ```
 
-但如果不固定 \(u_j\)，而是把：
+但如果不固定 $u_j$，而是把：
 
 ```math
 u_j\sim N(0,\sigma_u^2)
@@ -577,7 +577,7 @@ p(u_j)
 \,du_j
 ```
 
-这里就是把 \(u_j\) 积分掉。
+这里就是把 $u_j$ 积分掉。
 
 ---
 
@@ -635,12 +635,12 @@ ICC
 
 因此：
 
-- \(\sigma_u^2\) 越大，相对于组内噪声越明显，ICC 越高；
-- \(\sigma_\varepsilon^2\) 越大，组内 observation 越不稳定，ICC 越低。
+- $\sigma_u^2$ 越大，相对于组内噪声越明显，ICC 越高；
+- $\sigma_\varepsilon^2$ 越大，组内 observation 越不稳定，ICC 越低。
 
 ---
 
-# 10. 为什么需要方差—协方差矩阵 \(V\)？
+# 10. 为什么需要方差—协方差矩阵 $V$？
 
 假设一个 group 有 3 个 observation：
 
@@ -730,14 +730,14 @@ u_j+\varepsilon_{ij}
 
 其中：
 
-- \(\mathbf Y\)：所有 observation 组成的向量；
-- \(\mathbf X\boldsymbol\beta\)：fixed-effects 部分；
-- \(\mathbf Z\mathbf u\)：random-effects 部分；
-- \(\boldsymbol\varepsilon\)：所有 residual。
+- $\mathbf Y$：所有 observation 组成的向量；
+- $\mathbf X\boldsymbol\beta$：fixed-effects 部分；
+- $\mathbf Z\mathbf u$：random-effects 部分；
+- $\boldsymbol\varepsilon$：所有 residual。
 
 ---
 
-# 12. \(Z\) 是干什么的？
+# 12. $Z$ 是干什么的？
 
 假设有两个 group，每个 group 有两个 observation：
 
@@ -783,7 +783,7 @@ u_B
 \end{pmatrix}
 ```
 
-所以 \(Z\) 的作用只是：
+所以 $Z$ 的作用只是：
 
 > 告诉模型，每一个 observation 应该使用哪个 group 的随机效应。
 
@@ -939,8 +939,8 @@ Y\sim N(X\beta,V)
 
 也就是说：
 
-- 数据的平均结构由 \(X\beta\) 决定；
-- 数据的 variance/covariance structure 由 \(V\) 决定。
+- 数据的平均结构由 $X\beta$ 决定；
+- 数据的 variance/covariance structure 由 $V$ 决定。
 
 ---
 
@@ -1016,17 +1016,17 @@ f(y\mid\beta,V)
 
 其中：
 
-- 参数 \(\beta,V\) 固定；
-- \(y\) 变化。
+- 参数 $\beta,V$ 固定；
+- $y$ 变化。
 
 问题是：
 
-> 在给定这些参数时，不同的数据 \(y\) 有多可能出现？
+> 在给定这些参数时，不同的数据 $y$ 有多可能出现？
 
 但实际统计推断时：
 
-- 数据 \(y\) 已经观察到了；
-- \(\beta,V\) 未知。
+- 数据 $y$ 已经观察到了；
+- $\beta,V$ 未知。
 
 所以把同一个函数改写成：
 
@@ -1152,7 +1152,7 @@ V^{-1}
 }
 ```
 
-因为 \(\log(x)\) 是严格单调递增函数，所以：
+因为 $\log(x)$ 是严格单调递增函数，所以：
 
 ```math
 \arg\max L
@@ -1227,7 +1227,7 @@ V^{-1}
 
 ---
 
-# 19. 固定效应 \(\beta\) 的 GLS 解从哪里来？
+# 19. 固定效应 $\beta$ 的 GLS 解从哪里来？
 
 如果暂时认为：
 
@@ -1235,7 +1235,7 @@ V^{-1}
 V
 ```
 
-已经知道，那么 log-likelihood 中与 \(\beta\) 有关的部分是：
+已经知道，那么 log-likelihood 中与 $\beta$ 有关的部分是：
 
 ```math
 Q(\beta)
@@ -1251,7 +1251,7 @@ V^{-1}
 Q(\beta)
 ```
 
-对 \(\beta\) 求导：
+对 $\beta$ 求导：
 
 ```math
 \frac{\partial Q}{\partial\beta}
@@ -1347,11 +1347,11 @@ X^\top V^{-1}y
 }
 ```
 
-这里还需要假设设计矩阵 (X) 满列秩，使 ((X^\top X)^{-1}) 存在。
+这里还需要假设设计矩阵 $X$ 满列秩，使 $(X^\top X)^{-1}$ 存在。
 
 ---
 
-# 21. 随机截距方差 \(\sigma_u^2\) 是怎么估计的？
+# 21. 随机截距方差 $\sigma_u^2$ 是怎么估计的？
 
 因为：
 
@@ -1361,7 +1361,7 @@ V
 ZGZ^\top+R
 ```
 
-而 \(G\) 和 \(R\) 中包含：
+而 $G$ 和 $R$ 中包含：
 
 ```math
 \sigma_u^2
@@ -1387,7 +1387,7 @@ V^{-1}
 
 里面。
 
-因此，一般情况下无法像 \(\beta\) 那样得到简单的闭式解。
+因此，一般情况下无法像 $\beta$ 那样得到简单的闭式解。
 
 实际做法是：
 
@@ -1397,9 +1397,9 @@ V^{-1}
 \sigma_u^2,\sigma_\varepsilon^2
 ```
 
-2. 根据它们构造 \(V\)；
+2. 根据它们构造 $V$；
 
-3. 根据 \(V\) 得到 \(\hat\beta\)；
+3. 根据 $V$ 得到 $\hat\beta$；
 
 4. 计算 log-likelihood；
 
@@ -1441,7 +1441,7 @@ REML（Restricted Maximum Likelihood）则在估计 variance components 时，�
 
 ---
 
-# 23. 每个 group 的随机截距 \(u_j\) 怎么得到？
+# 23. 每个 group 的随机截距 $u_j$ 怎么得到？
 
 需要注意：
 
@@ -1483,7 +1483,7 @@ V^{-1}
 Y=X\beta+Zu+\varepsilon
 ```
 
-且 \(u\) 和 \(Y\) 都服从正态分布，所以：
+且 $u$ 和 $Y$ 都服从正态分布，所以：
 
 ```math
 \begin{pmatrix}
@@ -1570,7 +1570,7 @@ V^{-1}
 
 # 25. 最简单随机截距模型中的 shrinkage
 
-对于第 \(j\) 个 group：
+对于第 $j$ 个 group：
 
 ```math
 Y_{ij}
@@ -1640,7 +1640,7 @@ N
 }
 ```
 
-这个闭式表达式把 \(\beta_0\)、\(\sigma_u^2\) 和 \(\sigma_\varepsilon^2\) 视为已知；实际拟合时用它们的估计值，因此得到的是经验 BLUP。
+这个闭式表达式把 $\beta_0$、$\sigma_u^2$ 和 $\sigma_\varepsilon^2$ 视为已知；实际拟合时用它们的估计值，因此得到的是经验 BLUP。
 
 定义：
 
@@ -1795,7 +1795,7 @@ Y\sim N(X\beta,V)
 f(y\mid\beta,V)
 ```
 
-把实际观察到的数据 \(y\) 固定下来，把参数当成未知量：
+把实际观察到的数据 $y$ 固定下来，把参数当成未知量：
 
 ```math
 \boxed{

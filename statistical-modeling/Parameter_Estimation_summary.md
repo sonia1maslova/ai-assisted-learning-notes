@@ -10,11 +10,11 @@ Y=f(X,\theta)+\epsilon
 
 其中：
 
--   (Y)：观测数据（dependent variable）
--   (X)：预测变量或设计矩阵（predictors/design matrix）
--   (f())：模型结构
--   (\theta)：未知参数（parameters）
--   (\epsilon)：误差项（error）
+-   $Y$：观测数据（dependent variable）
+-   $X$：预测变量或设计矩阵（predictors/design matrix）
+-   $f()$：模型结构
+-   $\theta$：未知参数（parameters）
+-   $\epsilon$：误差项（error）
 
 模型本身描述"数据如何产生"，而参数估计回答：
 
@@ -191,13 +191,13 @@ MLE 不问：
 数学：
 
 ```math
-\hat{\theta}=\mathrm{argmax}_\theta L(\theta)
+\hat{\theta}=\arg\max_\theta L(\theta)
 ```
 
 其中：
 
 ```math
-L(\theta)=P(data\mid\theta)
+L(\theta)=p(\mathrm{data}\mid\theta)
 ```
 
 称为 likelihood（似然）。
@@ -287,14 +287,14 @@ MAP：
 贝叶斯公式：
 
 ```math
-Posterior \propto Likelihood\times Prior
+\mathrm{Posterior} \propto \mathrm{Likelihood}\times \mathrm{Prior}
 ```
 
 即：
 
 ```math
-P(\theta\middata) \propto
-P(data\mid\theta)P(\theta)
+P(\theta\mid \mathrm{data}) \propto
+P(\mathrm{data}\mid\theta)P(\theta)
 ```
 
 MAP寻找：
@@ -303,7 +303,7 @@ MAP寻找：
 \boxed{
 \hat{\theta}
 =
-argmax P(\theta|data)
+\arg\max_\theta p(\theta\mid \mathrm{data})
 }
 ```
 
@@ -318,7 +318,7 @@ argmax P(\theta|data)
 而是估计：
 
 ```math
-P(\theta\middata)
+P(\theta\mid \mathrm{data})
 ```
 
 即：
@@ -342,7 +342,7 @@ posterior无法直接求解。
 例如：
 
 ```math
-P(\theta\middata)
+P(\theta\mid \mathrm{data})
 ```
 
 无法解析计算。
@@ -374,7 +374,7 @@ Markov Chain Monte Carlo。
 这些样本代表：
 
 ```math
-P(\theta\middata)
+P(\theta\mid \mathrm{data})
 ```
 
 你的 bpnreg circular mixed model 就属于这一类。
@@ -410,7 +410,7 @@ Loss(\theta)
 
 其中：
 
-(\alpha)
+$\alpha$
 
 为学习率。
 
@@ -438,7 +438,7 @@ Loss(\theta)
 估计隐藏变量：
 
 ```math
-P(Z\middata,\theta)
+P(Z\mid \mathrm{data},\theta)
 ```
 
 ## M step
@@ -477,8 +477,8 @@ Y=X\beta+Zu+\epsilon
 
 包含：
 
--   固定效应 (\beta)
--   随机效应 (u)
+-   固定效应 $\beta$
+-   随机效应 $u$
 -   方差参数
 
 REML：
@@ -562,7 +562,7 @@ Linear Mixed Model。
 3.  推断参数分布：
 
 ```math
-P(\theta\middata)
+P(\theta\mid \mathrm{data})
 ```
 
 理解这三类思想，可以统一理解 GLM、混合模型、贝叶斯模型以及机器学习模型。

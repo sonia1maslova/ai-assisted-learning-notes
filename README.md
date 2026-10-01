@@ -12,6 +12,7 @@
 ## Topics
 
 - [统计建模与线性模型](statistical-modeling/)
+- [贝叶斯方法与 MCMC](bayesian-methods/)
 - [计算神经科学与 MRI/fMRI](neuroimaging-mri/)
 - [空间统计与空间零模型](spatial-statistics/)
 - [圆周统计与复向量](circular-statistics/)

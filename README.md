@@ -16,6 +16,7 @@
 - [空间统计与空间零模型](spatial-statistics/)
 - [圆周统计与复向量](circular-statistics/)
 - [研究方法与思维框架](research-methods/)
+- [机器学习算法](machine-learning/)
 
 ## Review status
 

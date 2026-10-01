@@ -9,6 +9,14 @@
 
 本仓库记录我的日常学习笔记。笔记主题、学习方向和最终整理方式由我决定，人工智能参与内容生成、解释、改写和结构整理。
 
+## Topics
+
+- [统计建模与线性模型](statistical-modeling/)
+- [计算神经科学与 MRI/fMRI](neuroimaging-mri/)
+- [空间统计与空间零模型](spatial-statistics/)
+- [圆周统计与复向量](circular-statistics/)
+- [研究方法与思维框架](research-methods/)
+
 ## Review status
 
 新笔记可以在文件开头加入以下元数据，用来标记 AI 辅助情况和人工审核状态：

@@ -15,7 +15,7 @@
   - [应用多层模型：逐页中文翻译与简要解读](statistical-modeling/Applied_Multilevel_Models_逐页中文翻译与简要解读.md)
 - [贝叶斯方法与 MCMC](bayesian-methods/)
 - [计算神经科学与 MRI/fMRI](neuroimaging-mri/)
-  - [脑影像空间中的生物学图谱：测量含义与解释边界](neuroimaging-mri/Brain_Biological_Atlases_in_MRI_Space.md)
+  - [脑影像空间中的生物学指标图谱](neuroimaging-mri/Brain_Biological_Atlases_in_MRI_Space.md)
 - [空间统计与空间零模型](spatial-statistics/)
 - [圆周统计与复向量](circular-statistics/)
 - [研究方法与思维框架](research-methods/)

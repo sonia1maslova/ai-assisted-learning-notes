@@ -12,6 +12,7 @@
 ## Topics
 
 - [统计建模与线性模型](statistical-modeling/)
+  - [统计阶数与统计矩：从均值、方差到高阶统计分析](statistical-modeling/统计阶数与统计矩_学习笔记.md)
   - [应用多层模型：逐页中文翻译与简要解读](statistical-modeling/Applied_Multilevel_Models_逐页中文翻译与简要解读.md)
 - [贝叶斯方法与 MCMC](bayesian-methods/)
 - [计算神经科学与 MRI/fMRI](neuroimaging-mri/)

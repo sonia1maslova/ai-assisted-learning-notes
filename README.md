@@ -26,6 +26,10 @@
 - [研究方法与思维框架](research-methods/)
   - [心理学与认知神经科学论文阅读框架](research-methods/心理学与认知神经科学论文阅读框架.md)
 - [机器学习算法](machine-learning/)
+- [计算机基础与操作系统](computer-basics/)
+  - [操作系统与计算机基础术语：Windows、macOS 与 Linux](computer-basics/操作系统与计算机基础术语_Windows_macOS_Linux.md)
+- [人工智能概念与术语](artificial-intelligence/)
+  - [AI 领域术语速查（2026）](artificial-intelligence/AI领域术语速查_2026.md)
 
 ## Review status
 

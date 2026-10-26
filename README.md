@@ -21,6 +21,8 @@
   - [脑影像空间中的生物学指标图谱：广泛检索与资源速查](neuroimaging-mri/Brain_Biological_Atlases_in_MRI_Space.md)
 - [神经电生理](electrophysiology/)
   - [神经电生理记录技术与信号类型：通用知识框架](electrophysiology/神经电生理记录技术与信号类型_完整笔记.md)
+- [图论与网络分析](graph-theory/)
+  - [图论指标总结：定义、公式、分支与解释](graph-theory/图论指标总结.md)
 - [空间统计与空间零模型](spatial-statistics/)
 - [圆周统计与复向量](circular-statistics/)
 - [研究方法与思维框架](research-methods/)

@@ -15,6 +15,8 @@
   - [概率、独立性、互信息与条件互信息](statistical-modeling/概率_独立性_互信息与条件互信息_基础笔记.md)
   - [统计阶数与统计矩：从均值、方差到高阶统计分析](statistical-modeling/统计阶数与统计矩_学习笔记.md)
   - [应用多层模型：逐页中文翻译与简要解读](statistical-modeling/Applied_Multilevel_Models_逐页中文翻译与简要解读.md)
+- [统计遗传学](statistical-genetics/)
+  - [重复测量遗传度分析：原理与解读](statistical-genetics/重复测量遗传度分析_原理与解读.md)
 - [贝叶斯方法与 MCMC](bayesian-methods/)
 - [计算神经科学与 MRI/fMRI](neuroimaging-mri/)
   - [ALE 元分析：核心概念与零分布计算](neuroimaging-mri/ALE元分析_核心概念与零分布计算.md)

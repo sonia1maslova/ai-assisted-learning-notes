@@ -34,6 +34,7 @@
 - [计算机基础与操作系统](computer-basics/)
   - [操作系统与计算机基础术语：Windows、macOS 与 Linux](computer-basics/操作系统与计算机基础术语_Windows_macOS_Linux.md)
 - [人工智能概念与术语](artificial-intelligence/)
+  - [Transformer 从零理解：背景知识、架构与训练逻辑](artificial-intelligence/Transformer从零理解_背景知识架构与训练逻辑.md)
   - [AI 领域术语速查（2026）](artificial-intelligence/AI领域术语速查_2026.md)
 
 ## Review status
